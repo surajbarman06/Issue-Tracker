@@ -1,7 +1,7 @@
 # Issue-Tracker
 This application is use to track issues/bugs for a project and allow users to create projects, view project details, and create issues related to each project.
 
-## Hosted URL :- https://issue-tracker-o65g.onrender.com
+## Hosted URL :- https://issue-tracker-lbc2.onrender.com
 
 ## Built With
 
