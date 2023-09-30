@@ -1,0 +1,62 @@
+<link rel="stylesheet" href="/css/projectDetails.css">
+
+
+<section id="filter">
+    <form id="navbar" action="/issueTracker/filterProjectDetails/" method="post">
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="flexRadio" value="projectName" id="flexRadio1" required>
+            <label class="form-check-label" for="flexRadio1">Project Title</label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="flexRadio" value="description" id="flexRadio2" required>
+            <label class="form-check-label" for="flexRadio2">Project Description</label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="flexRadio" value="authorName" id="flexRadio3" required>
+            <label class="form-check-label" for="flexRadio3">Project Author</label>
+        </div>
+        <button type="submit" class="btn " style="background-color: rgb(188, 1, 188); color: white;">Filter</button>
+    </form>
+</section>
+
+<main class="projectDetailsMain">
+    <% for(let project of projectDetails) { %>
+        <div href="#" class="projectDetailsDiv">
+
+            <div class="leftSide">
+                <h4>
+                    Project Name: <%= project.projectName%> <br>Author Name: <%= project.authorName %>
+                </h4>
+            </div>
+            <div class="rightSide">
+                <p>
+                  <h5>Description:  </h5><%= project.description%> 
+                </p>
+            </div>
+
+            <% if(project.bugs){%>
+                <div id="bugBox">
+                    <% for(let bug of project.bugs) { %>
+                        <div>
+                            <p>
+                                <%= bug.issueName %>
+                            </p>
+                            <small style="margin: 5px 0;">
+                                <%= bug.issueDescription %>
+                            </small>
+                            <i style="display: block;margin: 5px 0; ">
+                                - <%= bug.authorName %>
+                            </i>
+                        </div>
+                        <% } %>
+                </div>
+                <% }else{ %>
+                    <div id="bugBox">
+                        <h1 class="text-center"><i class="fa-solid fa-bug"></i> No Bug Faced</h1>
+                    </div>
+                    <% } %>
+                    <a href="/issueTracker/createAnIssue/<%= project._id %>" type="button" class="btn mt-4">+
+                        Raise an Issue</a>
+        </div>
+        <% } %>
+</main>

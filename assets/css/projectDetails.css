@@ -1,0 +1,123 @@
+/* Global styles */
+
+.projectDetailsMain {
+    margin: 0;
+    padding: 10px 0;
+    height: calc(100vh - 155px);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: white;
+    overflow-y: scroll;
+}
+
+.projectDetailsDiv {
+    margin: 8px;
+    padding: 5px;
+    width: 95%;
+    min-height: 250px;
+    color: purple;
+    background-color: white;
+    border: 2px solid purple;
+    position: relative;
+    cursor: pointer;
+    border-radius: 5px;
+    overflow: hidden;
+    transition: all 0.25s ease-in-out;
+}
+
+.leftSide {
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+.rightSide {
+    position: absolute;
+    top: 0;
+    right: 10px;
+    width: 60%;
+    font-size: 15px;
+}
+
+.rightSide h5 {
+    display: inline;
+    margin: 0;
+    font-size: inherit;
+}
+
+.rightSide p {
+    display: inline;
+    margin: 0;
+    font-size: inherit;
+}
+
+.projectDetailsDiv .mt-4 {
+    position: absolute;
+    bottom: 5px;
+    right: 10px;
+    color: white;
+    background-color: rgb(188, 1, 188);
+}
+
+.projectDetailsDiv:hover {
+    box-shadow: 0 0 5px purple;
+}
+
+.projectDetailsDiv h4 {
+    position: relative;
+    left: 0;
+}
+
+#filter {
+    display: flex;
+    justify-content: center;
+    background-color: ghostwhite;
+    padding: 5px 0;
+}
+
+#navbar {
+    padding: 10px;
+    width: 90%;
+    background-color: ghostwhite;
+    border: 2px solid purple;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    border-radius: 0.5rem;
+}
+
+#navbar button {
+    width: 100px;
+}
+
+#navbar label {
+    color: rgb(188, 1, 188);
+}
+
+#bugBox {
+    width: 80%;
+    height: 175px;
+    padding: 20px 0;
+    background-color: gold;
+    border-radius: 0.5rem;
+    color: #333;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    overflow-y: scroll;
+}
+
+#bugBox div {
+    width: 90%;
+    border-radius: 0.5rem;
+    text-align: center;
+    margin: 10px 0;
+    background-color: rgb(188, 1, 188);
+    color: white;
+    padding: 5px;
+}
